@@ -140,3 +140,46 @@ footer {
         grid-row: auto;
     }
 }
+
+.story {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.story-photo {
+    flex: 0 0 35%;
+}
+
+.story-photo img {
+    width: 100%;
+    height: auto;
+    /* overrides the grid's height: 100% so the photo keeps its proportions */
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h2 {
+    margin-bottom: 16px;
+}
+
+.story-text p {
+    max-width: 70ch;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .story {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .story-photo {
+        flex: none;
+        width: 100%;
+    }
+}
